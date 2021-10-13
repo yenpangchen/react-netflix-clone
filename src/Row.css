@@ -1,0 +1,49 @@
+.row {
+  color: white;
+  margin-left: 20px;
+}
+
+.row__posters {
+  display: flex;
+  /* align-items: center; */
+  /* 上下卷軸 */
+  overflow-y: hidden;
+  /* 左右卷軸 */
+  overflow-x: scroll;
+  padding: 20px;
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+.row__posters::-webkit-scrollbar {
+  display: none;
+}
+/* Hide scrollbar for IE, Edge and Firefox */
+.row__posters {
+  -ms-overflow-style: none;
+  /* IE and Edge */
+  scrollbar-width: none;
+  /* Firefox  */
+}
+
+.row__poster {
+  width: 100%;
+  max-height: 100px;
+  /* 保持圖片等比例 */
+  object-fit: contain;
+  margin: 10px;
+  /* 延遲 450ms */
+  transition: transform 450ms;
+}
+
+.row__poster:hover {
+  transform: scale(1.08);
+  /* 指向圖片時圖片會放大 */
+}
+
+.row__posterLarge {
+  max-height: 250px;
+}
+
+.row__posterLarge:hover {
+  transform: scale(1.09);
+}
